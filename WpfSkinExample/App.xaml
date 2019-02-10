@@ -1,0 +1,24 @@
+﻿<local:SkinnedApplication x:Class="WpfSkinExample.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:sys="clr-namespace:System;assembly=System"
+             xmlns:local="clr-namespace:WpfSkinExample"
+             Startup="Application_Startup"
+             DefaultSkinName="blue">
+
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+
+                <local:SkinResourceDictionary SkinName="Blue" SkinContent="Colors" Source="Skins/Blue/Colors.xaml" />
+                <local:SkinResourceDictionary SkinName="Blue" SkinContent="Sizes" Source="Skins/Blue/Sizes.xaml" />
+                <local:SkinResourceDictionary SkinName="Red" SkinContent="Colors" Source="Skins/Red/Colors.xaml" />
+                <local:SkinResourceDictionary SkinName="Red" SkinContent="Sizes" Source="Skins/Red/Sizes.xaml" />
+                
+                <ResourceDictionary Source="Styles/BorderStyling.xaml"/>
+                
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+
+</local:SkinnedApplication>
